@@ -14,6 +14,10 @@ reader.on('close', () => {
     const data = lines[1].split(' ').map(Number);
     const k = Number(lines[2]);
     
-    let arr = data.filter(v => (v==k));
-    console.log(arr.length);
+    //let arr = data.filter(v => (v==k));
+    let count = 0;
+    for(let i=0; i < data.length; i++) {
+      if(data[i] === k) count++;
+  }
+  console.log(count);
 });
