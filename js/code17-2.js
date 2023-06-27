@@ -16,11 +16,10 @@ reader.on('close', () => {
     
     while(n >= 2) {
         arr.push(n%2);
-        n = n/2;
+        n = Math.floor(n/2);
         
-        if(n<=1) arr.push(1);
+        if(n<=1) arr.push(n);
     }
-    
     let str = "";
     for(let i=arr.length-1; i>=0; i--) {
         str+=arr[i];
