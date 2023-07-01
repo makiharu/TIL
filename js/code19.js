@@ -12,15 +12,17 @@ reader.on('close', () => {
     // 3: Fizz
     // 5: Buzz
     const n = Number(lines[0]);
+    let str = "";
     for(let i=1; i<=n; i++) {
         if(i%15===0) {
-            console.log(`${i}: FizzBuzz`)
+            str=i+": FizzBuzz";
         } else if(i%3===0) {
-            console.log(`${i}: Fizz`);
+            str=i+": Fizz";
         } else if(i%5===0){
-            console.log(`${i}: Buzz`);
+            str=i+": Buzz";
         } else {
-            console.log(i);
+            str=i;
         }
+        console.log(str);
     }
 });
