@@ -22,10 +22,12 @@ reader.on('close', () => {
             str="Buzz";
         }
 
-        if(i%3!==0 && i%5!==0) {
+        if(i%3===0 && i%5===0) {
             str="FizzBuzz";
         }
         str = i + ": " + str;
         console.log(str);
+
+        str = "";
     }
 });
