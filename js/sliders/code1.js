@@ -1,6 +1,6 @@
+// DOMイベントとリスナー
 let targetElement = document.getElementById("target-p");
 const customEvent = new Event("myUniqueEvent");
-
 
 function randomFunction(e) {
     console.log("イベントが発生した要素:" + e.target);
