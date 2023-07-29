@@ -1,0 +1,5 @@
+.box {
+    height: 100px;
+    width: 800px;
+    transition: all 1s linear;
+}

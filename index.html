@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>TIL</title>
 </head>
@@ -36,12 +37,26 @@
         <button id="btnTest" type="button">Test Input</button>
       </div>
       <div>
-        <input id="inputResult" value="" type="text" placeholder="計算結果">
+        <input id="inputResult" disabled value="" type="text" placeholder="計算結果">
         <button id="buttonClear" type="button">Clear</button>
       </div>
     </div>
+
+    <!--slider-->
+    <div class="mt-4">
+      <div>
+        <h4>Slider</h4>
+        <div class="box bg-primary" id="sliderBox"></div>
+      </div>
+      <div class="mt-4">
+        <button id="backBtn" type="button">＜</button>
+        <button id="nextBtn" type="button">＞</button>
+      </div>
+    </div>
+
 </div>
 </body>
 <script src="main.js"></script>
 <script src="js/sliders/code3_calculator.js"></script>
+<script src="js/sliders/code4_slider.js"></script>
 </html>
