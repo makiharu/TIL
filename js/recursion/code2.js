@@ -13,9 +13,3 @@ function lenStringHelper(string, count, res) {
 
 console.log(lenString("hello world"));
 console.log(lenString("hello"));
-
-// 2つの近似値について、
-// 相対誤差0.01%未満でtrue, 0.01%以上 false
-function isSquareRootCloseEnough(a, b) {
-    return 100 * Math.abs((a-b) / b) < 0.01;
-}
