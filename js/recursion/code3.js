@@ -1,3 +1,4 @@
+// ハノイの塔
 function towerOfHanoi(discs){
     if(discs <= 1) return 1;
 
