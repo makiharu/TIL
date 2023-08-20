@@ -3,25 +3,16 @@ function howLongToReachFundGoal(capitalMoney, goalMoney, interest) {
 }
 
 function howLongToReachFundGoalHelper(capitalMoney, goalMoney, interest, year) {
-    if(year == 0 && capitalMoney >= goalMoney) return 0;
+    if(capitalMoney >= goalMoney) return year;
+    if(year >= 80) return 80;
 
-    if (year % 2 == 0) {
-        goalMoney = goalMoney * 1.02;
-    } else {
-        goalMoney = goalMoney * 1.03;
-    }
+    if (year % 2 == 0) goalMoney = goalMoney * 1.02;
+    else goalMoney = goalMoney * 1.03;
 
-    let profit = capitalMoney * (interest / 100);
-    capitalMoney += profit;
-
-    // ベースケース
-    if (capitalMoney >= goalMoney || year >= 80) {
-
-        return year < 80 ? year + 1 : 80;
-    }
+    capitalMoney = capitalMoney * (1 + interest / 100);
+    // capitalMoney *= (1 + interest / 100);
 
     return howLongToReachFundGoalHelper(capitalMoney, goalMoney, interest, year + 1);
 }
 
 console.log(howLongToReachFundGoal(15220,17296,26));
-
