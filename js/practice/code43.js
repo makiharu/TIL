@@ -9,20 +9,20 @@ function allNPrimesSieve(n) {
         if(!cache[currentPrime]) continue;
 
         let i=2;
-        // 合成数
-        let ip= currentPrime * i;
+        let ip = currentPrime * i;
+
         while(ip < n) {
             cache[ip] = false;
             i+=1;
             ip = currentPrime * i;
         }
     }
+
     let primeNumbers = [];
-    for(let i=2; i < cache.length; i++) {
+    for(let i=2; i < n; i++) {
         if(cache[i]) primeNumbers.push(i);
     }
     return primeNumbers;
 }
-
 console.log(allNPrimesSieve(100));
 console.log((allNPrimesSieve(100).length));
